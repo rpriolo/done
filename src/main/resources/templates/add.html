@@ -1,0 +1,28 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Task</title>
+</head>
+<body>
+    <h1>New Task</h1>
+
+    <form method="post" action="/tasks">
+        <label for="description">Description: </label>
+        <input id="description" type="text" name="description">
+        <br><br>
+        <label for="dueDate">Due date: </label>
+        <input id="dueDate" type="date" name="dueDate">
+        <br><br>
+        <label for="dueTime">Due time: </label>
+        <input id="dueTime" type="time" name="dueTime">
+        <br><br>
+        <label for="tag">Tag: </label>
+        <input id="tag" type="text" name="tag">
+        <br><br>
+        <input type="submit" value="Add">
+    </form>
+</body>
+</html>

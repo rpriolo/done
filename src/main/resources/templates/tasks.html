@@ -1,4 +1,6 @@
-<html lang="pt-br">
+<html lang="pt-br"
+      xmlns:th="https://www.thymeleaf.org/"
+>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -11,14 +13,23 @@
 
     <table>
         <thead>
-            <tr>
-                <th>Task</th>
-                <th>Due date</th>
-                <th>Due time</th>
-                <th>Tag</th>
-                <th>Done</th>
-            </tr>
+        <tr>
+            <th>Task</th>
+            <th>Due date</th>
+            <th>Due time</th>
+            <th>Tag</th>
+            <th>Done</th>
+        </tr>
         </thead>
+        <tbody>
+        <tr th:each="task : ${allTasks}">
+            <td th:text="${task.description}"></td>
+            <td th:text="${task.dueDate}"></td>
+            <td th:text="${task.dueTime}"></td>
+            <td th:text="${task.tag}"></td>
+            <td th:text="${task.done}"></td>
+        </tr>
+        </tbody>
     </table>
 </body>
 </html>

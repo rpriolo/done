@@ -6,6 +6,8 @@ import br.com.rpriolo.done.domain.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TaskService {
 
@@ -15,5 +17,9 @@ public class TaskService {
     public void createTask(TaskCreationData taskCreationData) {
         Task task = new Task(taskCreationData);
         repository.save(task);
+    }
+
+    public List<Task> getAllTasks() {
+        return repository.findAll();
     }
 }

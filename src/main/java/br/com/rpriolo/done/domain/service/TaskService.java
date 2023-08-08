@@ -26,4 +26,14 @@ public class TaskService {
     public void deleteTaskById(Long id) {
         repository.deleteById(id);
     }
+
+    public Task getTaskById(Long id) {
+        return repository.getReferenceById(id);
+    }
+
+    public void updateTask(Long id, TaskCreationData taskCreationData) {
+        Task task = repository.getReferenceById(id);
+        task.editTask(taskCreationData);
+        repository.save(task);
+    }
 }

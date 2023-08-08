@@ -29,6 +29,7 @@
             <td th:text="${task.tag}"></td>
             <td th:text="${task.done}"></td>
             <td>
+                <a th:href="@{/tasks/edit/{id}(id=${task.id})}">Edit</a>
                 <form method="post" action="/tasks" onsubmit="return confirm('Are you sure?')">
                     <input type="hidden" name="_method" value="DELETE">
                     <input type="hidden" name="id" th:value="${task.id}">

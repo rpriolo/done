@@ -34,6 +34,13 @@ public class Task {
         this.done = false;
     }
 
+    public void editTask(TaskCreationData taskCreationData) {
+        this.description = taskCreationData.description();
+        this.dueDate = taskCreationData.dueDate();
+        this.dueTime = taskCreationData.dueTime();
+        this.tag = taskCreationData.tag();
+    }
+
     @Override
     public String toString() {
         return "Task{" +

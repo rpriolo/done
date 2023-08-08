@@ -37,4 +37,9 @@ public class TaskController {
         return "redirect:/tasks";
     }
 
+    @DeleteMapping
+    public String deleteTask(Long id) {
+        service.deleteTaskById(id);
+        return "redirect:/tasks";
+    }
 }

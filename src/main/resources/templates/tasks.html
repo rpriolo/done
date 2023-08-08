@@ -28,6 +28,13 @@
             <td th:text="${task.dueTime}"></td>
             <td th:text="${task.tag}"></td>
             <td th:text="${task.done}"></td>
+            <td>
+                <form method="post" action="/tasks" onsubmit="return confirm('Are you sure?')">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <input type="hidden" name="id" th:value="${task.id}">
+                    <input type="submit" value="X">
+                </form>
+            </td>
         </tr>
         </tbody>
     </table>

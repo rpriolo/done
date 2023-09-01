@@ -9,3 +9,8 @@ A task management application that helps you keep everything on track. **Done** 
 - MySQL
 - Thymeleaf
 - Maven
+
+## Future improvements:
+- Friendly front-end interface;
+- Taks filters and sorting;
+- New task fields.

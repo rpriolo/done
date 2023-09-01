@@ -11,6 +11,6 @@ A task management application that helps you keep everything on track. **Done** 
 - Maven
 
 ## Future improvements:
-- Friendly front-end interface;
+- Friendly interface;
 - Taks filters and sorting;
 - New task fields.
